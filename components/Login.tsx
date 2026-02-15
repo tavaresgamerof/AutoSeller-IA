@@ -183,17 +183,17 @@ const Login: React.FC = () => {
                    <div className="flex-1 p-6 space-y-4">
                       <p className="text-emerald-400 flex items-center space-x-2">
                         <span className="opacity-50">10:45</span>
-                        <span className="font-bold">>> Lead: "Achei o valor um pouco puxado pra mim agora..."</span>
+                        <span className="font-bold">{" >> "} Lead: "Achei o valor um pouco puxado pra mim agora..."</span>
                       </p>
                       <p className="text-indigo-400 flex items-center space-x-2">
                          <span className="opacity-50">10:45</span>
-                         <span className="font-bold">>> IA: [EMPATIA_NIVEL_3] + [CONTORNO_OBJECAO]</span>
+                         <span className="font-bold">{" >> "} IA: [EMPATIA_NIVEL_3] + [CONTORNO_OBJECAO]</span>
                       </p>
                       <p className="text-slate-300 ml-4 bg-white/5 p-4 rounded-2xl border border-white/5 leading-relaxed">
                         "Poxa, eu te entendo perfeitamente! Investir no crescimento dá um frio na barriga mesmo. Mas pensa comigo: se você fechar apenas 2 clientes novos com a nossa ajuda, o sistema já se paga. Quer que eu veja uma condição de parcelamento pra te ajudar a começar hoje?"
                       </p>
                       <p className="text-emerald-400 flex items-center space-x-2 font-black uppercase">
-                         <span>>> RESULTADO: CLIENTE CONVENCIDO POR CONEXÃO</span>
+                         <span>{" >> "} RESULTADO: CLIENTE CONVENCIDO POR CONEXÃO</span>
                       </p>
                    </div>
                 </div>
