@@ -84,6 +84,7 @@ export const storageService = {
       // Tentar pegar dados do metadado do registro se disponíveis
       const businessName = user.user_metadata?.business_name || 'Minha Empresa Tech';
       
+      // Fix: Removed invalid 'webhook_url' and added missing required properties 'whatsapp_server_url' and 'connection_status'
       const defaultSettings: SalesSettings = {
         id: userId,
         sales_prompt: DEFAULT_SALES_PROMPT,
@@ -94,7 +95,8 @@ export const storageService = {
         business_name: businessName,
         whatsapp_api_key: '',
         whatsapp_instance_id: '',
-        webhook_url: `https://api.autoseller.ai/webhook/${userId}`,
+        whatsapp_server_url: '',
+        connection_status: 'disconnected',
         is_active: false,
         is_test_mode: true, // Novo usuário começa em teste
         subscription_status: 'trial'

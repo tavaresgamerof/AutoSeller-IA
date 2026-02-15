@@ -26,7 +26,7 @@ export type MessageType = 'text' | 'image' | 'audio' | 'video';
 
 export interface Lead {
   id: string;
-  user_id?: string; // Vinculo com o dono do lead
+  user_id?: string;
   phone: string;
   name: string;
   sales_stage: SalesStage;
@@ -63,7 +63,7 @@ export interface Flow {
 }
 
 export interface SalesSettings {
-  id?: string; // Agora usa o UUID do usuário do Supabase
+  id?: string;
   sales_prompt: string;
   objection_scripts: { [key: string]: string };
   message_limit: number;
@@ -72,9 +72,10 @@ export interface SalesSettings {
   business_name: string;
   whatsapp_api_key: string;
   whatsapp_instance_id: string;
-  webhook_url: string;
+  whatsapp_server_url: string; // URL da API de Gateway (Evolution, Z-API, etc)
+  connection_status: 'disconnected' | 'connecting' | 'connected';
   is_active: boolean;
-  is_test_mode: boolean; // Flag de modo teste
+  is_test_mode: boolean;
   subscription_status: 'trial' | 'active' | 'expired';
   last_error?: string;
 }
