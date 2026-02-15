@@ -10,6 +10,16 @@ export const storageService = {
     return user?.id;
   },
 
+  // Gera ou recupera um token de acesso para o Webhook
+  getWebhookToken: async () => {
+    const userId = await storageService.getCurrentUserId();
+    if (!userId) return null;
+    
+    // Usamos o ID do usuário como base para o segredo, mas em prod 
+    // idealmente teríamos uma coluna 'webhook_secret' na tabela settings
+    return btoa(userId).substring(0, 16);
+  },
+
   // LEADS
   getLeads: async (): Promise<Lead[]> => {
     const userId = await storageService.getCurrentUserId();
@@ -67,7 +77,7 @@ export const storageService = {
     await supabase.from('messages').insert(msg);
   },
 
-  // SETTINGS (Agora por Usuário)
+  // SETTINGS
   getSettings: async (): Promise<SalesSettings> => {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) throw new Error("Usuário não autenticado");
@@ -81,15 +91,13 @@ export const storageService = {
       .single();
     
     if (error || !data) {
-      // Tentar pegar dados do metadado do registro se disponíveis
       const businessName = user.user_metadata?.business_name || 'Minha Empresa Tech';
       
-      // Fix: Removed invalid 'webhook_url' and added missing required properties 'whatsapp_server_url' and 'connection_status'
       const defaultSettings: SalesSettings = {
         id: userId,
         sales_prompt: DEFAULT_SALES_PROMPT,
         objection_scripts: OBJECTION_SCRIPTS,
-        message_limit: 50, // Limite reduzido para teste
+        message_limit: 50,
         used_messages: 0,
         payment_link: '',
         business_name: businessName,
@@ -98,11 +106,10 @@ export const storageService = {
         whatsapp_server_url: '',
         connection_status: 'disconnected',
         is_active: false,
-        is_test_mode: true, // Novo usuário começa em teste
+        is_test_mode: true,
         subscription_status: 'trial'
       };
       
-      // Criar configurações iniciais se não existirem
       await supabase.from('settings').insert(defaultSettings);
       return defaultSettings;
     }
