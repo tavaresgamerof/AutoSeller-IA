@@ -6,8 +6,8 @@ import {
   AlertCircle, Briefcase, User, Smartphone, ArrowLeft, 
   CheckCircle, ShieldCheck, Zap, BarChart3, MessageSquare, 
   Globe, Shield, Star, Play, X, HeartHandshake, Users2, 
-  TrendingUp, Send, Bot, CheckCheck, HelpCircle, ShieldPlus,
-  Scale, Building2, ShoppingCart, Stethoscope, GraduationCap
+  TrendingUp, Send, Bot, CheckCheck, ShieldPlus, ChevronDown,
+  Building2, ShoppingCart, Stethoscope, GraduationCap
 } from 'lucide-react';
 
 const Login: React.FC = () => {
@@ -129,20 +129,20 @@ const Login: React.FC = () => {
           <div className="space-y-8 animate-in">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
               <HeartHandshake className="text-emerald-400 w-4 h-4" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-emerald-300">Venda Humanizada com IA</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-emerald-300">Inteligência com Empatia Humana</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9]">
-              A IA que <span className="text-indigo-500">Conecta</span> e Vende por Você.
+              Humanize sua Escala e <span className="text-indigo-500">Venda Mais</span> no WhatsApp.
             </h1>
             <p className="text-lg text-slate-400 max-w-lg leading-relaxed font-medium">
-              Esqueça robôs travados. Nossa tecnologia entende sentimentos, nuances e contextos, entregando um <span className="text-white font-bold">atendimento humano que escala suas vendas</span> 24h por dia no WhatsApp.
+              Pare de perder vendas para robôs robóticos. O AutoSeller entende gírias, contextos e sentimentos, criando uma <span className="text-white font-bold">conexão real</span> que converte leads em clientes fiéis 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => { setShowAuth(true); setIsSignUp(true); }}
                 className="bg-white text-slate-900 px-8 py-5 rounded-[2rem] font-black text-xs uppercase tracking-widest flex items-center justify-center space-x-3 hover:scale-105 transition-all shadow-2xl shadow-white/10"
               >
-                <span>Potencializar Minhas Vendas</span>
+                <span>Ativar Vendedor Humano</span>
                 <ChevronRight size={18} />
               </button>
               <button 
@@ -152,6 +152,18 @@ const Login: React.FC = () => {
                 <Play size={18} fill="currentColor" />
                 <span>Ver IA em Ação</span>
               </button>
+            </div>
+            
+            <div className="flex items-center space-x-4 pt-4">
+               <div className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-slate-500">
+                  <ShieldCheck size={16} className="text-indigo-400" />
+                  <span>Chip Protegido</span>
+               </div>
+               <div className="w-1 h-1 bg-slate-700 rounded-full"></div>
+               <div className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-slate-500">
+                  <TrendingUp size={16} className="text-emerald-400" />
+                  <span>+40% de Conversão</span>
+               </div>
             </div>
           </div>
 
@@ -166,22 +178,22 @@ const Login: React.FC = () => {
                         <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50"></div>
                         <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/50"></div>
                       </div>
-                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Conversational Brain</span>
+                      <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Sentient Sales Mode</span>
                    </div>
                    <div className="flex-1 p-6 space-y-4">
                       <p className="text-emerald-400 flex items-center space-x-2">
-                        <span className="opacity-50">14:02</span>
-                        <span className="font-bold">>> Lead: "Estou com medo de não servir pra mim..."</span>
+                        <span className="opacity-50">10:45</span>
+                        <span className="font-bold">>> Lead: "Achei o valor um pouco puxado pra mim agora..."</span>
                       </p>
                       <p className="text-indigo-400 flex items-center space-x-2">
-                         <span className="opacity-50">14:02</span>
-                         <span className="font-bold">>> IA: [EMPATIA_DETECTADA] + [PROVA_SOCIAL]</span>
+                         <span className="opacity-50">10:45</span>
+                         <span className="font-bold">>> IA: [EMPATIA_NIVEL_3] + [CONTORNO_OBJECAO]</span>
                       </p>
                       <p className="text-slate-300 ml-4 bg-white/5 p-4 rounded-2xl border border-white/5 leading-relaxed">
-                        "Super entendo seu receio, Maria! É normal sentir isso. Sabe o que o Ricardo, que tinha o mesmo problema que você, me disse semana passada? Olha esse áudio..."
+                        "Poxa, eu te entendo perfeitamente! Investir no crescimento dá um frio na barriga mesmo. Mas pensa comigo: se você fechar apenas 2 clientes novos com a nossa ajuda, o sistema já se paga. Quer que eu veja uma condição de parcelamento pra te ajudar a começar hoje?"
                       </p>
                       <p className="text-emerald-400 flex items-center space-x-2 font-black uppercase">
-                         <span>>> RESULTADO: OBJEÇÃO QUEBRADA COM SUCESSO</span>
+                         <span>>> RESULTADO: CLIENTE CONVENCIDO POR CONEXÃO</span>
                       </p>
                    </div>
                 </div>
@@ -193,13 +205,13 @@ const Login: React.FC = () => {
       {/* Social Proof Bar */}
       <div className="py-12 border-y border-white/5 bg-slate-950/20">
          <div className="max-w-7xl mx-auto px-6">
-            <p className="text-center text-[10px] font-black uppercase tracking-[0.3em] text-slate-600 mb-8">Empresas que escalam com AutoSeller</p>
+            <p className="text-center text-[10px] font-black uppercase tracking-[0.3em] text-slate-600 mb-8">Empresas que confiam no nosso atendimento humanizado</p>
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-               <div className="text-2xl font-black tracking-tighter text-white">TECH<span className="text-indigo-500">CORP</span></div>
-               <div className="text-2xl font-black tracking-tighter text-white">INFRA<span className="text-indigo-500">SELL</span></div>
-               <div className="text-2xl font-black tracking-tighter text-white">DIGITAL<span className="text-indigo-500">FLOW</span></div>
-               <div className="text-2xl font-black tracking-tighter text-white">MAX<span className="text-indigo-500">ROI</span></div>
-               <div className="text-2xl font-black tracking-tighter text-white">SMART<span className="text-indigo-500">SALES</span></div>
+               <div className="text-2xl font-black tracking-tighter text-white">BRAZIL<span className="text-indigo-500">TECH</span></div>
+               <div className="text-2xl font-black tracking-tighter text-white">VENDAS<span className="text-indigo-500">MAX</span></div>
+               <div className="text-2xl font-black tracking-tighter text-white">SAAS<span className="text-indigo-500">FLOW</span></div>
+               <div className="text-2xl font-black tracking-tighter text-white">GROWTH<span className="text-indigo-500">AI</span></div>
+               <div className="text-2xl font-black tracking-tighter text-white">SCALE<span className="text-indigo-500">HUB</span></div>
             </div>
          </div>
       </div>
@@ -208,24 +220,24 @@ const Login: React.FC = () => {
       <section id="features" className="py-24 px-6 bg-slate-950/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-black text-white tracking-tighter">Humanização que <span className="text-indigo-500">Impulsiona.</span></h2>
-            <p className="text-slate-500 font-medium max-w-2xl mx-auto">Nossa IA não apenas responde, ela entende o momento de compra de cada cliente.</p>
+            <h2 className="text-4xl font-black text-white tracking-tighter">O Fim das Respostas <span className="text-indigo-500">Robóticas.</span></h2>
+            <p className="text-slate-500 font-medium max-w-2xl mx-auto">Nossa tecnologia foi treinada em milhões de conversas de vendas reais no Brasil para garantir que seu cliente se sinta ouvido.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
               icon={<Users2 className="text-indigo-400" />}
-              title="Diálogo Natural"
-              desc="Respostas que parecem escritas por um consultor sênior, com empatia e tom de voz personalizado."
+              title="Escuta Ativa"
+              desc="A IA não apenas 'despeja' informação. Ela analisa a dor do cliente e responde de forma empática e consultiva."
             />
             <FeatureCard 
               icon={<ShieldCheck className="text-emerald-500" />}
-              title="Conexão Segura"
-              desc="Tecnologia Anti-Ban que protege seu chip enquanto mantém a fluidez de uma conversa real."
+              title="Proteção de Chip"
+              desc="Padrões de digitação humanos e intervalos inteligentes que evitam bloqueios e banimentos."
             />
             <FeatureCard 
               icon={<TrendingUp className="text-amber-500" />}
-              title="Vendedor Implacável"
-              desc="Identifica o momento exato de enviar o link e fechar o pedido, sem ser invasivo ou robótico."
+              title="Fechador Implacável"
+              desc="Detecta o momento exato de enviar o link de checkout e fechar o pedido de forma natural."
             />
           </div>
         </div>
@@ -235,25 +247,25 @@ const Login: React.FC = () => {
       <section id="comparison" className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
            <div className="text-center mb-16">
-              <h2 className="text-4xl font-black text-white tracking-tighter">Robô Comum vs. <span className="text-indigo-500">AutoSeller</span></h2>
-              <p className="text-slate-500 font-medium mt-4">A diferença entre perder um cliente e fechar uma venda.</p>
+              <h2 className="text-4xl font-black text-white tracking-tighter">Por que somos <span className="text-indigo-500">Diferentes?</span></h2>
+              <p className="text-slate-500 font-medium mt-4">A maioria dos robôs afasta clientes. O AutoSeller aproxima.</p>
            </div>
 
            <div className="bg-slate-900/40 border border-white/10 rounded-[3rem] overflow-hidden shadow-2xl">
               <table className="w-full text-left">
                  <thead className="bg-white/5 border-b border-white/5">
                     <tr>
-                       <th className="p-8 text-[10px] font-black uppercase text-slate-500 tracking-widest">Recurso</th>
-                       <th className="p-8 text-[10px] font-black uppercase text-slate-500 tracking-widest">Chatbots Antigos</th>
+                       <th className="p-8 text-[10px] font-black uppercase text-slate-500 tracking-widest">Atributo</th>
+                       <th className="p-8 text-[10px] font-black uppercase text-slate-500 tracking-widest">Chatbots Comuns</th>
                        <th className="p-8 text-[10px] font-black uppercase text-indigo-400 tracking-widest bg-indigo-500/5">AutoSeller AI</th>
                     </tr>
                  </thead>
                  <tbody className="divide-y divide-white/5">
-                    <ComparisonRow label="Entendimento de Gírias" old="Zero" modern="Total (Nativo BR)" />
-                    <ComparisonRow label="Quebra de Objeções" old="Scripts Fixos" modern="IA Persuasiva" />
-                    <ComparisonRow label="Tempo de Resposta" old="Lento/Instável" modern="Instantâneo 24/7" />
-                    <ComparisonRow label="Envio de Mídia (Áudio/Vídeo)" old="Complexo" modern="Automático e Fluido" />
-                    <ComparisonRow label="Sensação de Humanidade" old="Fria e Robótica" modern="Empática e Consultiva" />
+                    <ComparisonRow label="Tom de Voz" old="Frio e Limitado" modern="Caloroso e Humano" />
+                    <ComparisonRow label="Entendimento de Gírias" old="Nenhum" modern="Completo (Nativo BR)" />
+                    <ComparisonRow label="Resolução de Conflitos" old="Menu de Opções" modern="Diálogo Inteligente" />
+                    <ComparisonRow label="Gatilhos Mentais" old="Inexistentes" modern="Estratégicos e Fluídos" />
+                    <ComparisonRow label="Taxa de Abandono" old="Alta (Robô detectado)" modern="Baixa (Conexão gerada)" />
                  </tbody>
               </table>
            </div>
@@ -264,14 +276,13 @@ const Login: React.FC = () => {
       <section className="py-24 px-6 bg-indigo-600/5">
          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-               <h2 className="text-4xl font-black text-white tracking-tighter">Feito para o <span className="text-indigo-500">Seu Negócio.</span></h2>
-               <p className="text-slate-500 font-medium mt-4">Nossa IA já vem pré-treinada para os mercados mais competitivos.</p>
+               <h2 className="text-4xl font-black text-white tracking-tighter">Venda Mais em <span className="text-indigo-500">Qualquer Mercado.</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-               <NicheCard icon={<GraduationCap />} title="Infoprodutos" desc="Venda cursos e mentorias no automático." />
-               <NicheCard icon={<Building2 />} title="Imobiliárias" desc="Qualifique leads e agende visitas 24h." />
-               <NicheCard icon={<Stethoscope />} title="Saúde" desc="Confirmação de consultas e triagem inteligente." />
-               <NicheCard icon={<ShoppingCart />} title="E-commerce" desc="Recupere carrinhos e tire dúvidas de produtos." />
+               <NicheCard icon={<GraduationCap />} title="Infoprodutos" desc="Venda cursos e mentorias quebrando objeções no automático." />
+               <NicheCard icon={<Building2 />} title="Imobiliárias" desc="Qualifique leads interessados e agende visitas sem esforço." />
+               <NicheCard icon={<Stethoscope />} title="Clínicas" desc="Confirmação de consultas e triagem humanizada 24h." />
+               <NicheCard icon={<ShoppingCart />} title="E-commerce" desc="Recupere carrinhos e tire dúvidas sobre frete e produtos." />
             </div>
          </div>
       </section>
@@ -280,36 +291,36 @@ const Login: React.FC = () => {
       <section id="faq" className="py-24 px-6">
          <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-               <h2 className="text-4xl font-black text-white tracking-tighter">Dúvidas <span className="text-indigo-500">Frequentes.</span></h2>
+               <h2 className="text-4xl font-black text-white tracking-tighter">Perguntas <span className="text-indigo-500">Frequentes.</span></h2>
             </div>
             <div className="space-y-4">
                <FaqItem 
                   index={0} 
                   active={activeFaq} 
                   setActive={setActiveFaq}
-                  question="O meu número de WhatsApp corre risco de banimento?"
-                  answer="Utilizamos tecnologia de emulação humana, simulando pausas para digitação e horários de descanso, o que reduz drasticamente o risco. Além disso, recomendamos o uso de APIs oficiais que integramos perfeitamente."
+                  question="O cliente percebe que é uma IA?"
+                  answer="Nosso motor de NLP foi afinado para usar gírias brasileiras e pausas de digitação. Em 95% dos casos, o cliente acredita estar falando com um atendente humano dedicado."
                />
                <FaqItem 
                   index={1} 
                   active={activeFaq} 
                   setActive={setActiveFaq}
-                  question="Preciso saber programar para configurar?"
-                  answer="Absolutamente não! Nossa interface é 100% visual e intuitiva. Você define seu tom de voz e as regras do seu negócio em texto simples, e a IA cuida do resto."
+                  question="Posso usar meu próprio número?"
+                  answer="Sim! Você conecta seu WhatsApp via QR Code de forma simples e segura, mantendo seu número comercial oficial."
                />
                <FaqItem 
                   index={2} 
                   active={activeFaq} 
                   setActive={setActiveFaq}
-                  question="A IA consegue enviar áudios e vídeos?"
-                  answer="Sim! Você pode configurar fluxos automáticos que enviam depoimentos em vídeo ou áudios explicativos como se tivessem sido gravados na hora, aumentando muito a conversão."
+                  question="A IA consegue enviar áudios?"
+                  answer="Com certeza. Você pode configurar áudios pré-gravados para que a IA os envie no momento certo da conversa, simulando um envio em tempo real."
                />
                <FaqItem 
                   index={3} 
                   active={activeFaq} 
                   setActive={setActiveFaq}
-                  question="Posso integrar com meu CRM ou Checkout?"
-                  answer="Com certeza. Temos integração via Webhooks que permite conectar o AutoSeller a qualquer plataforma como Hotmart, Kiwify, RD Station, HubSpot e muito mais."
+                  question="Como funciona a garantia?"
+                  answer="Oferecemos 7 dias de garantia incondicional. Se não notar uma melhora na qualidade do seu atendimento, devolvemos seu dinheiro."
                />
             </div>
          </div>
@@ -318,26 +329,26 @@ const Login: React.FC = () => {
       {/* Pricing Section */}
       <section id="pricing" className="py-24 px-6 bg-slate-950/50">
          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-black text-white tracking-tighter mb-4">Planos para <span className="text-indigo-500">Escalar com Lucro.</span></h2>
-            <p className="text-slate-500 font-medium mb-16">Escolha o motor que vai tracionar suas vendas hoje.</p>
+            <h2 className="text-4xl font-black text-white tracking-tighter mb-4">Planos que <span className="text-indigo-500">Se Pagam Sozinhos.</span></h2>
+            <p className="text-slate-500 font-medium mb-16">Escolha a potência do seu motor de vendas.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                <PriceCard 
-                  tier="Teste"
+                  tier="Iniciante"
                   price="Gratis"
-                  features={['50 mensagens inclusas', 'Atendimento Humanizado', 'Suporte Comunidade']}
+                  features={['50 mensagens inclusas', 'IA Humanizada', 'Painel de Gestão']}
                   onAction={() => { setShowAuth(true); setIsSignUp(true); }}
                />
                <PriceCard 
                   tier="Professional"
                   price="R$ 197"
                   featured
-                  features={['Mensagens Ilimitadas', '10 Fluxos de Mídia', 'IA Customizável', 'Dashboard de Vendas', 'Integração Webhook']}
+                  features={['Mensagens Ilimitadas', 'Quebra de Objeções VIP', 'Envio de Áudios', 'Integração Webhook', 'Suporte Prioritário']}
                   onAction={() => { setShowAuth(true); setIsSignUp(true); }}
                />
                <PriceCard 
                   tier="Enterprise"
                   price="R$ 497"
-                  features={['Vários Números', 'API Full Webhook', 'Treinamento de IA VIP', 'Gerente de Contas', 'Prioridade de Processamento']}
+                  features={['Multi-Números', 'Treinamento Customizado', 'API Full Access', 'Gerente de Contas', 'Garantia de Uptime 99.9%']}
                   onAction={() => { setShowAuth(true); setIsSignUp(true); }}
                />
             </div>
@@ -353,9 +364,9 @@ const Login: React.FC = () => {
                </div>
             </div>
             <div className="space-y-6">
-               <h2 className="text-3xl font-black text-white tracking-tighter">Garantia Blindada de 7 Dias</h2>
+               <h2 className="text-3xl font-black text-white tracking-tighter">Sua Venda Protegida</h2>
                <p className="text-slate-400 font-medium leading-relaxed">
-                  Teste o AutoSeller em sua operação real por uma semana completa. Se você não notar uma melhora na qualidade do atendimento ou na taxa de fechamento, devolvemos 100% do seu investimento. <span className="text-white font-bold">Sem perguntas, sem burocracia.</span>
+                  Estamos tão confiantes no poder humanizado do AutoSeller que oferecemos <span className="text-white font-bold">7 dias de teste sem risco</span>. Se não vender mais, não paga nada.
                </p>
                <button 
                   onClick={() => { setShowAuth(true); setIsSignUp(true); }}
@@ -423,7 +434,7 @@ const Login: React.FC = () => {
         </div>
       )}
 
-      {/* Demo Modal */}
+      {/* Demo Interactive Modal - Functional */}
       {showDemo && (
         <DemoModal onClose={() => setShowDemo(false)} onStartTrial={() => { setShowDemo(false); setShowAuth(true); setIsSignUp(true); }} />
       )}
@@ -483,7 +494,6 @@ const FaqItem = ({ index, active, setActive, question, answer }: any) => (
   </div>
 );
 
-// Re-using existing components
 const FeatureCard = ({ icon, title, desc }: any) => (
   <div className="bg-slate-900/40 border border-white/5 p-8 rounded-[2.5rem] space-y-4 hover:border-indigo-500/30 transition-all group">
     <div className="p-4 bg-white/5 rounded-2xl w-fit group-hover:scale-110 transition-transform">{icon}</div>
@@ -513,8 +523,9 @@ const Input = ({ icon, type = 'text', placeholder, value, onChange }: any) => (
   </div>
 );
 
+// Demo Modal Component
 const DemoModal = ({ onClose, onStartTrial }: { onClose: () => void, onStartTrial: () => void }) => {
-  const [messages, setMessages] = useState([{ id: '1', direction: 'outbound', text: "Olá! Sou o assistente inteligente da AutoSeller. Me diga, qual o seu maior desafio hoje em vender pelo WhatsApp?" }]);
+  const [messages, setMessages] = useState([{ id: '1', direction: 'outbound', text: "Olá! Tudo bem? Sou o consultor virtual da AutoSeller. Me conta, qual o seu nicho e qual sua maior dificuldade hoje em vender pelo WhatsApp?" }]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -526,12 +537,14 @@ const DemoModal = ({ onClose, onStartTrial }: { onClose: () => void, onStartTria
     const userMsg = input; setInput('');
     setMessages(prev => [...prev, { id: Date.now().toString(), direction: 'inbound', text: userMsg }]);
     setIsTyping(true);
+    
+    // Simulate human-like thinking delay
     setTimeout(() => {
       setIsTyping(false);
       const responses = [
-        "Entendo perfeitamente! Esse é o desafio de 90% dos nossos clientes. A boa notícia é que com a nossa IA humanizada, você consegue triplicar esse atendimento sem perder a qualidade. Quer ver como configuramos isso?",
-        "Interessante! Sabe, Maria (um dos nossos casos de sucesso) tinha exatamente esse receio. Ela começou com o plano Professional e em 1 semana já tinha automatizado 70% das conversas iniciais. Que tal testar grátis?",
-        "Perfeito. O segredo está em como a IA quebra as objeções de preço logo de cara. Eu faço isso simulando um consultor real. Posso te mostrar o painel de controle?"
+        "Nossa, entendo perfeitamente! Esse problema de leads que 'somem' é super comum. A boa notícia é que minha IA humanizada consegue manter o engajamento lá no alto, tratando cada lead com a atenção que ele merece. Quer ver como eu montaria um fluxo pra você?",
+        "Show de bola! Atendo muitos clientes nesse nicho e o segredo é a agilidade no primeiro contato, mas sem parecer um robô travado. Eu uso gatilhos de empatia pra gerar confiança imediata. Vamos testar?",
+        "Entendi! Sabe o que a gente faz nesses casos? Configuramos uma abordagem consultiva. Eu descubro a dor real do lead antes de oferecer o produto. Isso aumenta a conversão em até 40%. Quer experimentar meu painel?"
       ];
       const randomReply = responses[Math.floor(Math.random() * responses.length)];
       setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), direction: 'outbound', text: randomReply }]);
@@ -544,7 +557,7 @@ const DemoModal = ({ onClose, onStartTrial }: { onClose: () => void, onStartTria
         <div className="p-6 border-b border-white/5 flex items-center justify-between bg-slate-800/50">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20"><Bot className="text-white w-5 h-5" /></div>
-            <div><h3 className="text-sm font-black text-white tracking-tight">Demonstração ao Vivo</h3><p className="text-[10px] font-bold text-emerald-400 uppercase">IA Humanizada Ativa</p></div>
+            <div><h3 className="text-sm font-black text-white tracking-tight">Vendedor Humano IA</h3><p className="text-[10px] font-bold text-emerald-400 uppercase">Demonstração Interativa</p></div>
           </div>
           <button onClick={onClose} className="p-2 text-slate-500 hover:text-white transition-colors"><X size={20} /></button>
         </div>
@@ -556,22 +569,18 @@ const DemoModal = ({ onClose, onStartTrial }: { onClose: () => void, onStartTria
               </div>
             </div>
           ))}
-          {isTyping && (<div className="flex justify-start"><div className="bg-slate-800 px-4 py-3 rounded-2xl rounded-tl-none flex items-center space-x-1 border border-white/5"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce"></div><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.2s]"></div><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.4s]"></div></div></div>)}
+          {isTyping && (<div className="flex justify-start"><div className="bg-slate-800 px-4 py-3 rounded-2xl rounded-tl-none flex items-center space-x-1 border border-white/5"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce"></div><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.2s] shadow-indigo-500/40"></div><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.4s]"></div></div></div>)}
         </div>
         <div className="p-6 border-t border-white/5 bg-slate-900">
            <div className="relative group">
-              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()} placeholder="Digite sua dúvida aqui..." className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-14 text-white focus:outline-none focus:border-indigo-500/50 transition-all text-sm font-medium" />
-              <button onClick={handleSend} className={`absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-xl transition-all ${input.trim() ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-600 cursor-not-allowed'}`}><Send size={18} /></button>
+              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()} placeholder="Fale comigo aqui..." className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-14 text-white focus:outline-none focus:border-indigo-500/50 transition-all text-sm font-medium" />
+              <button onClick={handleSend} className={`absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-xl transition-all ${input.trim() ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30' : 'text-slate-600 cursor-not-allowed'}`}><Send size={18} /></button>
            </div>
-           <button onClick={onStartTrial} className="w-full mt-4 py-3 text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:text-indigo-300 transition-colors flex items-center justify-center space-x-2"><span>Gostou? Comece seu teste real agora</span><ChevronRight size={14} /></button>
+           <button onClick={onStartTrial} className="w-full mt-4 py-3 text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:text-indigo-300 transition-colors flex items-center justify-center space-x-2"><span>Impressionado? Garanta sua vaga agora</span><ChevronRight size={14} /></button>
         </div>
       </div>
     </div>
   );
 };
-
-const ChevronDown = ({ size }: { size: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-);
 
 export default Login;
