@@ -1,0 +1,5 @@
+{
+  "name": "Auto Seller",
+  "description": "A sophisticated automated sales engine for WhatsApp using Gemini AI to qualify leads, handle objections, and close sales automatically.",
+  "requestFramePermissions": []
+}
